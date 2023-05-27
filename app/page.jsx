@@ -10,6 +10,10 @@ const links = [
   {
     label: 'auth',
     route: '/auth'
+  },
+  {
+    label: 'Pokemons',
+    route: '/pokemon'
   }
 ]
 
