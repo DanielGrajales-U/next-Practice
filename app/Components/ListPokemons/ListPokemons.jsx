@@ -1,5 +1,6 @@
 import React from 'react'
 import Styles from '@/Styles/ListPokemons.module.css'
+import LikeButton from '../LikeButton/LikeButton'
 
 const fetchingData = async () => {
   return await fetch('https://pokeapi.co/api/v2/pokemon')
@@ -13,7 +14,10 @@ export default async function ListPokemons () {
     <fragment>
       <section className={Styles.pokemons}>
         {pokemonsData.map(pok => (
-          <p className={Styles.pokemon_name} key={pok.name}>{pok.name}</p>
+          <div className={Styles.pok} key={pok.name}>
+            <p className={Styles.pokemon_name}>{pok.name}</p>
+            <LikeButton id={pok.name} />
+          </div>
         ))}
       </section>
     </fragment>

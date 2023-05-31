@@ -2,6 +2,12 @@
     display:flex;
     flex-wrap: wrap;
 }
+
+.pok{
+    display: flex;
+    align-items: center;
+}
+
 .pokemon_name{
     background-color: #000;
     color: #fff;
